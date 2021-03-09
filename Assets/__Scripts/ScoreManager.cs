@@ -66,6 +66,7 @@ public class ScoreManager : MonoBehaviour
                 score += scoreRun; // add scoreRun to total score
                 scoreRun = 0; // reset scoreRun
                 break;
+            
             case eScoreEvent.mine: // Remove a mine card
                 chain++; // increase the score chain
                 scoreRun += chain; // add score for this card to run
@@ -98,7 +99,7 @@ public class ScoreManager : MonoBehaviour
                 break;
         }
     }
-    static public int CHAIN { get { return S.chain; } } // e
+    static public int CHAIN { get { return S.chain; } } 
     static public int SCORE { get { return S.score; } }
     static public int SCORE_RUN { get { return S.scoreRun; } }
 }
