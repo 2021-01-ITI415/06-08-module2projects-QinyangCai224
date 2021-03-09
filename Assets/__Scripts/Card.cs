@@ -70,23 +70,34 @@ public class Card : MonoBehaviour {
 	}
 
 
-	public bool faceUp {
-		get {
+	public bool faceUp
+	{
+		get
+		{
 			return (!back.activeSelf);
 		}
 
-		set {
+		set
+		{
 			back.SetActive(!value);
 		}
 	}
-
-
-	
-	// Update is called once per frame
-	void Update () {
-	
+		// Virtual methods can be overridden by subclass methods with the same name
+	virtual public void OnMouseUpAsButton()
+	{
+		print(name); // When clicked, this outputs the card name
 	}
-} // class Card
+
+
+
+
+// Update is called once per frame
+void Update ()
+	{
+
+	}
+}
+// class Card
 
 [System.Serializable]
 public class Decorator{
